@@ -86,27 +86,34 @@ public class app
             //     System.out.println("Tax: " + (142100 + (nodoklis-1000000) * 0.17));
             // }
 
-            int summa = 0;
-            int daudzums = 0;
+            // int summa = 0;
+            // int daudzums = 0;
 
 
-            while (true) {
-                System.out.println("Give a number: ");
-                 int ievade = Integer.valueOf(scanner.nextLine());
+            // while (true) {
+            //     System.out.println("Give a number: ");
+            //      int ievade = Integer.valueOf(scanner.nextLine());
 
-                 int sum = 0;
+            //      int sum = 0;
 
-                if (ievade == 0) {
-                    break;
+            //     if (ievade == 0) {
+            //         break;
 
-                }
-                else {
-                    daudzums += 1;
-                    summa = summa + ievade;
-                }
+            //     }
+            //     else {
+            //         daudzums += 1;
+            //         summa = summa + ievade;
+            //     }
 
-            }
-            System.out.println("Ammount of numbers: " + daudzums);
-            System.out.println("Sum of numbers: " + summa);
+            // }
+            // System.out.println("Ammount of numbers: " + daudzums);
+            // System.out.println("Sum of numbers: " + summa);
+
+
+            int skaitlis = Integer.valueOf(scanner.nextLine());
+
+             for (int i = 0; i <= skaitlis; i++) {
+                System.out.println(i);
+             }
         }
 }
