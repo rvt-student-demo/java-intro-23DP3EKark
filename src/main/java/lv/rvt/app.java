@@ -58,32 +58,55 @@ public class app
             //     System.out.println("incredible!");
             // }
 
-            System.out.println("Value of the gift?");
+            // System.out.println("Value of the gift?");
 
-            int nodoklis = Integer.valueOf(scanner.nextLine());
+            // int nodoklis = Integer.valueOf(scanner.nextLine());
 
-            if (nodoklis < 5000) {
-                System.out.println("No tax!");
+            // if (nodoklis < 5000) {
+            //     System.out.println("No tax!");
+            // }
+
+            // else if (nodoklis >= 5000 && nodoklis < 25000) {
+            //     System.out.println("Tax: " + (100 + (nodoklis-5000) * 0.08));
+            // }
+
+            // else if (nodoklis >= 25000 && nodoklis < 55000) {
+            //     System.out.println("Tax: " + (1700 + (nodoklis-25000) * 0.1));
+            // }
+
+            // else if (nodoklis >= 55000 && nodoklis < 200000) {
+            //     System.out.println("Tax: " + (4700 + (nodoklis-55000) * 0.12));
+            // }
+
+            // else if (nodoklis >= 200000 && nodoklis < 1000000) {
+            //     System.out.println("Tax: " + (22100 + (nodoklis-200000) * 0.15));
+            // }
+
+            // else if (nodoklis >= 1000000) {
+            //     System.out.println("Tax: " + (142100 + (nodoklis-1000000) * 0.17));
+            // }
+
+            int summa = 0;
+            int daudzums = 0;
+
+
+            while (true) {
+                System.out.println("Give a number: ");
+                 int ievade = Integer.valueOf(scanner.nextLine());
+
+                 int sum = 0;
+
+                if (ievade == 0) {
+                    break;
+
+                }
+                else {
+                    daudzums += 1;
+                    summa = summa + ievade;
+                }
+
             }
-
-            else if (nodoklis >= 5000 && nodoklis < 25000) {
-                System.out.println("Tax: " + (100 + (nodoklis-5000) * 0.08));
-            }
-
-            else if (nodoklis >= 25000 && nodoklis < 55000) {
-                System.out.println("Tax: " + (1700 + (nodoklis-25000) * 0.1));
-            }
-
-            else if (nodoklis >= 55000 && nodoklis < 200000) {
-                System.out.println("Tax: " + (4700 + (nodoklis-55000) * 0.12));
-            }
-
-            else if (nodoklis >= 200000 && nodoklis < 1000000) {
-                System.out.println("Tax: " + (22100 + (nodoklis-200000) * 0.15));
-            }
-
-            else if (nodoklis >= 1000000) {
-                System.out.println("Tax: " + (142100 + (nodoklis-1000000) * 0.17));
-            }
+            System.out.println("Ammount of numbers: " + daudzums);
+            System.out.println("Sum of numbers: " + summa);
         }
 }
