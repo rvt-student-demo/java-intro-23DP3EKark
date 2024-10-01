@@ -110,10 +110,21 @@ public class app
             // System.out.println("Sum of numbers: " + summa);
 
 
-            int skaitlis = Integer.valueOf(scanner.nextLine());
+            // int skaitlis = Integer.valueOf(scanner.nextLine());
 
-             for (int i = 0; i <= skaitlis; i++) {
-                System.out.println(i);
-             }
+            //  for (int i = 0; i <= skaitlis; i++) {
+            //     System.out.println(i);
+            //  }
+
+            int summa = 0;
+
+            System.out.println("Last number? ");
+            int ievade = Integer.valueOf(scanner.nextLine());
+
+            for (int i = 0; i <= ievade; i++) {
+                summa += i;
+            }
+
+            System.out.println("The sum is " + summa);
         }
 }
