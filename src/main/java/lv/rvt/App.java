@@ -1,7 +1,7 @@
 package lv.rvt;
 import java.util.Scanner;
 
-public class app
+public class App
 {
     public static void main( String[] args ){
         Scanner scanner = new Scanner(System.in);
@@ -116,15 +116,55 @@ public class app
             //     System.out.println(i);
             //  }
 
+            // int summa = 0;
+
+            // System.out.println("Last number? ");
+            // int ievade = Integer.valueOf(scanner.nextLine());
+
+            // for (int i = 0; i <= ievade; i++) {
+            //     summa += i;
+            // }
+
+            // System.out.println("The sum is " + summa);
+
+
+
+            // for (int x = 10; x < 100; x += 10){
+            //     System.out.println(x);
+            // }
+
+
+
+            System.out.println("Give numbers: ");
+            
+            int daudzums = 0;
             int summa = 0;
+            int odd = 0;
+            int even = 0;
 
-            System.out.println("Last number? ");
-            int ievade = Integer.valueOf(scanner.nextLine());
+            while (true) {
+                int ievade = Integer.valueOf(scanner.nextLine());
 
-            for (int i = 0; i <= ievade; i++) {
-                summa += i;
-            }
+                if (ievade == -1) {
+                    break;
+                }
+                else if (ievade % 2 == 0) {
+                    summa = summa + ievade;
+                    daudzums += 1;
+                    even += 1;
+                }
+                else {
+                    summa = summa + ievade;
+                    daudzums += 1;
+                    odd += 1;
+                }
+                }
+                System.out.println("Thx! Bye!");
+                System.out.println("Sum: " + summa);
+                System.out.println("Numbers: " + daudzums);
+                System.out.println("Average: " + (1.0 * summa / daudzums));
+                System.out.println("Even: " + even);
+                System.out.println("Odd: " + odd);
+                        }
 
-            System.out.println("The sum is " + summa);
-        }
 }
