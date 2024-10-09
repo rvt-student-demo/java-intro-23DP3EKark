@@ -135,36 +135,49 @@ public class App
 
 
 
-            System.out.println("Give numbers: ");
+            // System.out.println("Give numbers: ");
             
-            int daudzums = 0;
-            int summa = 0;
-            int odd = 0;
-            int even = 0;
+            // int daudzums = 0;
+            // int summa = 0;
+            // int odd = 0;
+            // int even = 0;
 
-            while (true) {
-                int ievade = Integer.valueOf(scanner.nextLine());
+            // while (true) {
+            //     int ievade = Integer.valueOf(scanner.nextLine());
 
-                if (ievade == -1) {
-                    break;
-                }
-                else if (ievade % 2 == 0) {
-                    summa = summa + ievade;
-                    daudzums += 1;
-                    even += 1;
-                }
-                else {
-                    summa = summa + ievade;
-                    daudzums += 1;
-                    odd += 1;
-                }
-                }
-                System.out.println("Thx! Bye!");
-                System.out.println("Sum: " + summa);
-                System.out.println("Numbers: " + daudzums);
-                System.out.println("Average: " + (1.0 * summa / daudzums));
-                System.out.println("Even: " + even);
-                System.out.println("Odd: " + odd);
-                        }
+            //     if (ievade == -1) {
+            //         break;
+            //     }
+            //     else if (ievade % 2 == 0) {
+            //         summa = summa + ievade;
+            //         daudzums += 1;
+            //         even += 1;
+            //     }
+            //     else {
+            //         summa = summa + ievade;
+            //         daudzums += 1;
+            //         odd += 1;
+            //     }
+            //     }
+            //     System.out.println("Thx! Bye!");
+            //     System.out.println("Sum: " + summa);
+            //     System.out.println("Numbers: " + daudzums);
+            //     System.out.println("Average: " + (1.0 * summa / daudzums));
+            //     System.out.println("Even: " + even);
+            //     System.out.println("Odd: " + odd);
 
+            System.out.println("Cik reizes vēlaties tikt sasveicināts?");
+            int ievade = Integer.valueOf(scanner.nextLine());
+
+            for (int reizes = 0; reizes < ievade; reizes++) {
+                greet();
+            }
+
+    }
+    
+    public static void greet() {
+        System.out.println("Sveiki!");
+
+    
+    }
 }
