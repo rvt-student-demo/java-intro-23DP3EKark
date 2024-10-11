@@ -6,18 +6,18 @@ public class App
     public static void main( String[] args ){
         Scanner scanner = new Scanner(System.in);
 
-        printSquare(4);
+        printRectangle(17, 3);
 
     }
     
-    public static void printSquare(int size) {
-        for (int kolonas = 0; kolonas < size; kolonas++) {
-            for (int rindas = 0; rindas < size; rindas++) {
+    public static void printRectangle(int platums, int garums) {
+        
+        for (int garumsZv = 0; garumsZv < garums; garumsZv++) {
+            for (int platumsZv = 0; platumsZv < platums; platumsZv++) {
                 System.out.print("*");
             }
             System.out.println("");
         }
-
         
     }
 }
