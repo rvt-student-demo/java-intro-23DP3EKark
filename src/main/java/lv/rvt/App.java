@@ -5,21 +5,18 @@ public class App
 {
     public static void main( String[] args ){
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("no");
-        int no = Integer.valueOf(scanner.nextLine());
-        System.out.println("lidz");
-        int lidz = Integer.valueOf(scanner.nextLine());
 
-        divisibleByThreeInRange(no, lidz);
+        printStars(5);
+        printStars(3);
+        printStars(9);
+
 
     }
     
-    public static void divisibleByThreeInRange(int no, int lidz) {
-        for (int skaitlis = no; skaitlis <= lidz; skaitlis++){
-            if (skaitlis % 3 == 0) {
-                System.out.println(skaitlis);
-            }
+    public static void printStars(int number) {
+        for (int zvaigznes = 0; zvaigznes < number; zvaigznes++) {
+            System.out.print("*");
         }
+        System.out.println("");
     }
 }
