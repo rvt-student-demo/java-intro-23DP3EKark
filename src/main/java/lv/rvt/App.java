@@ -6,17 +6,18 @@ public class App
     public static void main( String[] args ){
         Scanner scanner = new Scanner(System.in);
 
-        printStars(5);
-        printStars(3);
-        printStars(9);
-
+        printSquare(4);
 
     }
     
-    public static void printStars(int number) {
-        for (int zvaigznes = 0; zvaigznes < number; zvaigznes++) {
-            System.out.print("*");
+    public static void printSquare(int size) {
+        for (int kolonas = 0; kolonas < size; kolonas++) {
+            for (int rindas = 0; rindas < size; rindas++) {
+                System.out.print("*");
+            }
+            System.out.println("");
         }
-        System.out.println("");
+
+        
     }
 }
