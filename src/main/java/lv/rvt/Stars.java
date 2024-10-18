@@ -24,10 +24,28 @@ public class Stars {
     }
 
     public static void reverseTriangle(int size){
-            for (int i = 0; i <= size; i++){
-                printSpaces(size-i);
-                printStars(i);
+            for (int x = 0; x <= size; x++){
+                printSpaces(size-x);
+                printStars(x);
             }
     }
+
+    public static void printChristmasTreeStump(int size){
+        for (int i = 0; i < 2; i++){
+            for(int j = 0; j < 1; j++){
+                printSpaces(size-1);
+                System.out.print("***");
+            }
+        System.out.println("");
+        }
+    }
     
+    public static void christmasTree(int size){
+        for (int y = 0; y <= size-1; y++){
+            printSpaces(size-y);
+            printStars(y*2+1);
+        }
+        printChristmasTreeStump(size);
+        
+    }
 }
