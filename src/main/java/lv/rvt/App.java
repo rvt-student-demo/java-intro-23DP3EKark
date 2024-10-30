@@ -1,38 +1,45 @@
 package lv.rvt;
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> saraksts = new ArrayList<>();
         
-        while (true) {
-            System.out.print("Ievadiet skaitli (-1, lai pabeigtu): ");
-            int ievade = Integer.parseInt(scanner.nextLine()); // Parsing input to integer
+        Random random = new Random();
+        
+        ArrayList<Integer> skaitli = new ArrayList<>();
 
-            if (ievade == -1) {
-                // User input to determine range
-                System.out.print("From where? ");
-                int start = Integer.parseInt(scanner.nextLine());
+        int sum = 0;
 
-                System.out.print("To where? ");
-                int end = Integer.parseInt(scanner.nextLine());
+        for (int i = 0; i < 10; i++){
+            int randomvalue = random.nextInt(10);
+            skaitli.add(randomvalue);
+            sum = sum + randomvalue;
+        }
+        System.out.println(skaitli);
 
-                // Check for valid indices
-                if (start < 0 || end < 0 || start >= saraksts.size() || end >= saraksts.size() || start > end) {
-                    System.out.println("Jūs ievadījāt nepareizu indeksu!!");
-                } else {
-                    for (int i = start; i <= end; i++) {
-                        System.out.println(saraksts.get(i));
-                    }
-                }
-                break; // Exit the loop after processing the range
+        int maz = skaitli.get(0);
+        int liel = skaitli.get(0);
 
-            } else {
-                saraksts.add(ievade); // Add input number to the list
+        for (int sk = 0; sk < 10; sk++){
+            if (skaitli.get(sk) < maz){
+                maz = skaitli.get(sk);
             }
         }
+        System.out.println(maz);
+
+        for (int sk = 0; sk < 10; sk++){
+            if (skaitli.get(sk) > liel){
+                liel = skaitli.get(sk);
+            }
+        }
+        System.out.println(liel);
+
+        double avg = 1.0 * sum / 10;
+        System.out.println(avg);
+
         scanner.close();
     }
 }
