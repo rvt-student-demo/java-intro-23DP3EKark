@@ -7,38 +7,27 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        Random random = new Random();
-        
-        ArrayList<Integer> skaitli = new ArrayList<>();
-
         int sum = 0;
+        int count = 0;
+        String garakais = "";
 
-        for (int i = 0; i < 10; i++){
-            int randomvalue = random.nextInt(10);
-            skaitli.add(randomvalue);
-            sum = sum + randomvalue;
-        }
-        System.out.println(skaitli);
-
-        int maz = skaitli.get(0);
-        int liel = skaitli.get(0);
-
-        for (int sk = 0; sk < 10; sk++){
-            if (skaitli.get(sk) < maz){
-                maz = skaitli.get(sk);
+        while (true){
+            String ievade = scanner.nextLine();
+            if (ievade.isEmpty()){
+                double average = 1.0 * sum / count;
+                System.out.println("Longest name: " + garakais);
+                System.out.println("Average of the birth years: " + average);
+                break;
+            }
+            else{
+                String[] parts = ievade.split(",");
+                sum = sum + Integer.valueOf(parts[1]);
+                count = count + 1;
+                if (parts[0].length() > garakais.length()){
+                    garakais = parts[0];
+                }
             }
         }
-        System.out.println(maz);
-
-        for (int sk = 0; sk < 10; sk++){
-            if (skaitli.get(sk) > liel){
-                liel = skaitli.get(sk);
-            }
-        }
-        System.out.println(liel);
-
-        double avg = 1.0 * sum / 10;
-        System.out.println(avg);
 
         scanner.close();
     }
