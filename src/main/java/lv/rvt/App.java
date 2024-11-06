@@ -7,27 +7,21 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        int sum = 0;
-        int count = 0;
-        String garakais = "";
-
-        while (true){
-            String ievade = scanner.nextLine();
-            if (ievade.isEmpty()){
-                double average = 1.0 * sum / count;
-                System.out.println("Longest name: " + garakais);
-                System.out.println("Average of the birth years: " + average);
-                break;
-            }
-            else{
-                String[] parts = ievade.split(",");
-                sum = sum + Integer.valueOf(parts[1]);
-                count = count + 1;
-                if (parts[0].length() > garakais.length()){
-                    garakais = parts[0];
-                }
-            }
-        }
+        Account artosAccount = new Account("Arto's account", 100.00);
+        Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
+        
+        System.out.println("Initial state");
+        System.out.println(artosAccount);
+        System.out.println(artosSwissAccount);
+        
+        artosAccount.withdraw(20);
+        System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+        artosSwissAccount.deposit(200);
+        System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
+        
+        System.out.println("End state");
+        System.out.println(artosAccount);
+        System.out.println(artosSwissAccount);
 
         scanner.close();
     }
