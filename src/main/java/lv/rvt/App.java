@@ -1,11 +1,11 @@
 package lv.rvt;
-import java.util.Random;
-import java.util.ArrayList;
-import java.util.Scanner;
+// import java.util.Random;
+// import java.util.ArrayList;
+// import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
         
         Account artosAccount = new Account("Arto's account", 100.00);
         Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
@@ -23,6 +23,5 @@ public class App {
         System.out.println(artosAccount);
         System.out.println(artosSwissAccount);
 
-        scanner.close();
     }
 }
