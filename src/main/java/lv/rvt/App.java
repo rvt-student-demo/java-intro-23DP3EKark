@@ -11,5 +11,7 @@ public class App {
         statistics.addNumber(1);
         statistics.addNumber(2);
         System.out.println("Count: " + statistics.getCount());
+        System.out.println("Sum: " + statistics.sum());
+        System.out.println("Average: " + statistics.average());
     }
 }
