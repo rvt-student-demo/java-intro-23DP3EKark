@@ -1,28 +1,14 @@
 package lv.rvt;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        PaymentCard paulsCard = new PaymentCard(20);
-        PaymentCard mattsCard = new PaymentCard(30);
-
-        paulsCard.eatHeartily();
-        mattsCard.eatAffordably();
-        System.out.println(paulsCard);
-        System.out.println(mattsCard);
-
-        paulsCard.addMoney(20);
-
-        mattsCard.eatHeartily();
+        Scanner Scanner = new Scanner(System.in);
         
-        System.out.println(paulsCard);
-        System.out.println(mattsCard);
+        while(true) {
+            System.out.print("Title: ");
+            int title = 
+        }
 
-        paulsCard.eatAffordably();
-        paulsCard.eatAffordably();
-
-        mattsCard.addMoney(50);
-
-        System.out.println(paulsCard);
-        System.out.println(mattsCard);
     }
 }
