@@ -4,7 +4,7 @@ public class Person {
 
     private String name;
     private int age;
-    private int weight;
+    public int weight;
     private int height;
 
     public Person(String name) {
@@ -30,10 +30,6 @@ public class Person {
 
     public int getHeight() {
         return this.height;
-    }
-
-    public int getWeight() {
-        return this.weight;
     }
 
     public void growOlder() {

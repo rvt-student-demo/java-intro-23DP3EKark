@@ -1,10 +1,12 @@
 package lv.rvt;
 
 public class HealthStation {
-    
-private int weight;
 
-    public int weigh(Person person) {
-        return person.getWeight();
+public int weigh(Person person) {
+        return person.weight;
     }
+
+public void feed(Person person) {
+    person.weight = person.weight + 1;
+}
 }

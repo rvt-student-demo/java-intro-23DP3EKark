@@ -13,6 +13,15 @@ public class Main {
 
         System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
         System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
-        
+
+        childrensHospital.feed(ethan);
+        childrensHospital.feed(ethan);
+        childrensHospital.feed(ethan);
+
+        System.out.println("");
+
+        System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+        System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+
     }
 }
