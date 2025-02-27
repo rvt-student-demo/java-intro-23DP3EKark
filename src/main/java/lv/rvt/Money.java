@@ -39,5 +39,16 @@ public class Money {
         }
     }
 
+    public Money minus(Money decreaser) {
+        int totalCents = (this.euros * 100 + this.cents) - (decreaser.euros * 100 + decreaser.cents);
+        
+        if (totalCents <= 0) {
+            return new Money(totalCents = 0, totalCents = 0);
+        } else {
+            return new Money(totalCents / 100, totalCents % 100);
+        }
+        
+    }
+
 
 }
